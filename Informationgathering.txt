@@ -51,7 +51,19 @@ There are various tool for dns in open source.
 "nslookup" - similar
 
 TCP/UDP Port Scanning;
-Netcat a basic commad tool for scan(nc)
+Netcat a basic commad tool for scan , command "nc ...."
+
+Nmap tool,
+nmap ip|domain
+nmap -p 1-64444 ip ->port scan
+
+Stealth scan - Does not comple TCP handshake ,faster scan
+namp -sS ip
+UDP scan - nmap -sU ip
+
+For more command  goole it.
+
+
 
 
 
