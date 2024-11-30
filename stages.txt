@@ -1,0 +1,9 @@
+Stages of PT:
+Defining the Scope
+Information Gathering
+Vulnerability Detection
+Initial Foothold
+Privilege Escalation
+Lateral Movement
+Reporting/Analysis
+Lessons Learned/Remediation
