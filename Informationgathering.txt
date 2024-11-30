@@ -1,0 +1,58 @@
+Types:
+1.Passive
+2.Active
+
+1.Passive:(OSINT - opensource intelligence)
+Getting information withouth directly interacting the target 
+getting info form third party sources,sites,DNS query...
+gathering info in secracy
+
+WHOIS:
+Gathers info of the domain by DNS query
+
+Search Engines(Gogole search):
+ref:https://www.google.com/advanced_search
+use this operators to gather info
+https://www.exploit-db.com/google-hacking-database (GHDB)
+https://dorksearch.com
+
+Open source:
+Search in Github,gitlab....online repositories for any information.
+
+Shodan search:
+gathers info about devices,protocol versions...
+
+Security headers:
+check the security response headers are in place - https://securityheaders.com
+
+TLS/SSL scan:
+check for any TLS misconfig - https://www.ssllabs.com/ssltest/
+
+
+Active:
+Gathers info by interacting with target.
+
+DNS Enumeration:
+DNS(Domain name resolver) is a distributed databse contains domain name - associated IP
+Records,
+NS: Nameserver records contain the name of the authoritative servers hosting the DNS records for a domain.
+A: Also known as a host record, the "a record" contains the IPv4 address of a hostname (such as www.megacorpone.com).
+AAAA: Also known as a quad A host record, the "aaaa record" contains the IPv6 address of a hostname (such as www.megacorpone.com).
+MX: Mail Exchange records contain the names of the servers responsible for handling email for the domain. A domain can contain multiple MX records.
+PTR: Pointer Records are used in reverse lookup zones and can find the records associated with an IP address.
+CNAME: Canonical Name Records are used to create aliases for other host records.
+TXT: Text records can contain any arbitrary data and be used for various purposes, such as domain ownership verification.
+
+commands to DNS:
+"host" command used to get records of domain 
+"dnsrecon" - kali linus commad to automate dns recon.
+There are various tool for dns in open source.
+
+"nslookup" - similar
+
+TCP/UDP Port Scanning;
+Netcat a basic commad tool for scan(nc)
+
+
+
+
