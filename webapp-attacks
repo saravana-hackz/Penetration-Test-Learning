@@ -1,0 +1,49 @@
+Types of web app testing:
+
+White-box testing:
+In white-box testing, the tester has complete access to the application's internal details
+Source code: All the programming code that makes up the application.
+Documentation: Design documents, API specifications, and architecture diagrams.
+Infrastructure details: Information about the servers, network configuration, databases
+*White-box testing can take longer to complete compared to black-box testing because of the need to review potentially large codebases and design documents. 
+
+Black-Box Testing (also known as "zero-knowledge" testing):
+Only the application interface: The tester interacts with the system through its public-facing features—such as the website, APIs, or mobile app—but has no insight into the underlying code, infrastructure, or architecture.
+Reconnaissance Phase: The tester will spend a significant portion of their time in the initial enumeration phase, gathering as much information as possible through publicly available sources (e.g., DNS records, WHOIS information, and any data exposed by the application). This phase also involves scanning and probing the application for potential vulnerabilities (e.g., open ports, directory traversal, etc.).
+*Black-box testing typically takes more time in the reconnaissance and exploitation phases because the tester has to discover everything about the system without any prior knowledge. 
+
+Fingerprinting Web app with Nmap:
+use -sV to get version and services
+use http-enum -enumerate directories command - sudo nmap -p80 --script=http-enum ip
+
+Technology Stack Identification with Wappalyzer:
+https://www.wappalyzer.com
+
+Directory Brute Force with Gobuster:
+Gobuster1 is a tool (written in Go language) that can help us with this sort of enumeration. It uses wordlists to discover directories and files on a server through brute forcing.
+Due to its brute forcing nature, Gobuster can generate quite a lot of traffic, meaning it will not be helpful when staying under the radar is necessary.
+Gobuster supports different enumeration modes, including fuzzing and dns,
+
+Burp-suite:
+Learn in - https://portswigger.net/burp/documentation/desktop/tools
+
+
+Web Application Enumeration:
+Debugging Page Content:
+use browser options - Inspector,Debugger,Network,...
+
+Headers - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
+Api Testing:
+An API (Application Programming Interface) is a set of rules, protocols, and tools that allows one software application to interact with another. 
+It defines the way different software components should communicate with each other. APIs are widely used to enable the integration of different systems, 
+services, and applications, allowing them to exchange data and perform specific tasks.
+
+We can use Gobuster features to brute force the API endpoints. ,
+pattern,txt
+{GOBUSTER}/v1
+{GOBUSTER}/v2
+comand gobuster dir -u http://192.168.50.16:5002 -w /usr/share/wordlists/dirb/pattern.txt -p pattern
+
+Cross-Site Scripting:
+Refer Port Swigger
