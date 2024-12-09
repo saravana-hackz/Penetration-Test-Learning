@@ -1,0 +1,17 @@
+Directory Traversal:
+
+Absolute vs Relative Paths:
+Absolute ->From root directory '/'
+Relative ->../../
+
+can perform traversal with Encoding Special Characters(URL encoding)
+
+Local File Inclusion (LFI):
+File inclusion vulnerabilities allow us to "include" a file in the application's running code. This means we can use file inclusion vulnerabilities to execute local 
+or remote files, while directory traversal only allows us to read the contents of a file. Since we can include files in the application's running code 
+with file inclusion vulnerabilities, we can also display the file contents of non-executable files. For example, if we leverage a directory traversal vulnerability 
+in a PHP web application and specify the file admin.php, the source code of the PHP file will be displayed. On the other hand, when dealing with a file inclusion 
+vulnerability, the admin.php file will be executed instead.
+
+in terminal commands we can use & to execute next command
+ cd ../&ls  ->traverse backs and show list of files
