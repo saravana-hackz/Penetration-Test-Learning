@@ -15,3 +15,20 @@ vulnerability, the admin.php file will be executed instead.
 
 in terminal commands we can use & to execute next command
  cd ../&ls  ->traverse backs and show list of files
+
+Remote File Inclusion (RFI):
+RFI vulnerabilities allow us to include files from a remote system over HTTP1 or SMB.
+A webshell is a small script that provides a web-based command line interface, making it easier and more convenient to execute commands
+
+File Upload Vulnerabilities:
+*The first category consists of vulnerabilities enabling us to upload files that are executable by the web application. 
+For example, if we can upload a PHP script to a web server where PHP is enabled
+
+*The second category consists of vulnerabilities that require us to combine the file upload mechanism with another vulnerability, 
+such as Directory Traversal. For example, if the web application is vulnerable to Directory Traversal, we can use a relative path in
+the file upload request and try to overwrite files like authorized_keys. Furthermore, we can also combine file upload mechanisms with 
+XML External Entity (XXE)1 or Cross Site Scripting (XSS)2 attacks. For example, when we are allowed to upload an avatar to a profile 
+with an SVG3 file type, we may embed an XXE attack to display file contents or even execute code
+
+Command Injection:
+injecting system commads through inputs.
