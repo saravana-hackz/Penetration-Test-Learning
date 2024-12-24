@@ -1,0 +1,26 @@
+SQLI:
+Structured Query Language (SQL) has been developed specifically to manage and interact with data stored inside relational databases. 
+
+DB Types and Characteristics:
+To improve its security, the user's password is stored in the authentication_string field as a Caching-SHA-256 algorithm.
+
+Kali Linux includes Impacket, a Python framework that enables network protocol interactions. Among many other protocols, it supports Tabular Data Stream (TDS), 
+the protocol adopted by MSSQL that is implemented in the impacket-mssqlclient tool.
+We can run impacket-mssqlclient to connect to the remote Windows machine running MSSQL by providing a username, a password, and the remote IP, 
+together with the -windows-auth keyword. This forces NTLM authentication (as opposed to Kerberos). We'll explore Windows authentication in more depth in upcoming Modules.
+
+
+UNION-based Payloads:
+Whenever we're dealing with in-band SQL injections and the result of the query is displayed along with the application-returned value, we should also test for UNION-based SQL injections.
+
+Blind SQL Injections:
+blind SQL injections describe scenarios in which database responses are never returned and behavior is inferred using either boolean- or time-based logic.
+
+Manual Code Execution:
+In Microsoft SQL Server, the xp_cmdshell function takes a string and passes it to a command shell for execution. The function returns any output as rows of text. 
+EXECUTE sp_configure 'xp_cmdshell', 1;
+
+Automating the Attack:
+The SQL injection process we followed can be automated using several tools pre-installed on Kali Linux. In particular, 
+sqlmap can identify and exploit SQL injection vulnerabilities against various database engines.
+
